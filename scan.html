@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code Scanner</title>
+    <style>
+        #video {
+            width: 50%;
+            height: 40%;
+            border: 2px solid #000;
+            margin: 10px 0;
+            
+        }
+        .flex{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #result{
+             margin-left: 20px;
+        }
+        .alert{
+            text-align: center;
+        }
+        #dis,#align{
+            color: red;
+            margin: 7px;
+            font-size: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="flex">
+    <video id="video" playsinline></video>
+    <canvas id="canvas" style="display: none;"></canvas>
+    <div id="result">
+    </div>
+   
+</div>
+<div class="alert">
+    <p id="dis">  distance alert </p>
+    <p id="align"> align alert</p>
+
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
+    <script src="scan.js"></script>
+</body>
+</html>
+
+<!-- 
+if(distance<=150){
+    dis.innerText= "distance is so ling"
+
+}if (alignment<=150) {
+align.innerText="please align the qr code and try"
+
+}  -->
